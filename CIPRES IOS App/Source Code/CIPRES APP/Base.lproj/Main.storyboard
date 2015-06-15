@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rLX-ij-niQ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ZBf-kg-uV9">
+            <objects>
+                <navigationController id="kft-LG-Rza" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gPD-iC-ifP"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Wc1-Zi-F3w">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rc6-FJ-653" kind="relationship" relationship="rootViewController" id="p9J-fx-um6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fbU-M6-LA6" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1317" y="-118"/>
+        </scene>
+        <!--Master-->
+        <scene sceneID="h9a-OA-o2h">
+            <objects>
+                <tableViewController title="Master" id="rc6-FJ-653" customClass="APPMasterViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fZ2-cQ-8dy">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="HVy-Zf-Nxg" style="IBUITableViewCellStyleDefault" id="PnR-Um-Y2W">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PnR-Um-Y2W" id="d1w-TU-m3J">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HVy-Zf-Nxg">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="xaW-uh-m1f" kind="push" identifier="showDetail" id="VBN-H9-WTt"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="rc6-FJ-653" id="fdJ-sM-Jjl"/>
+                            <outlet property="delegate" destination="rc6-FJ-653" id="zKr-Ga-J33"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Your Jobs: Tap job to see status" id="whV-Xg-5Oa"/>
+                    <connections>
+                        <outlet property="tableView" destination="fZ2-cQ-8dy" id="uFZ-Wl-o8t"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OsY-pg-TFp" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-355" y="-118"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="HO1-gJ-75W">
+            <objects>
+                <viewController title="Detail" id="xaW-uh-m1f" customClass="APPDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Cm-9R-83p"/>
+                        <viewControllerLayoutGuide type="bottom" id="FHn-pU-0OC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wed-tx-xSo">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFn-Hn-1OM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Text" translatesAutoresizingMaskIntoConstraints="NO" id="lCy-ch-Sqw">
+                                <rect key="frame" x="0.0" y="66" width="308" height="534"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yFn-Hn-1OM" firstAttribute="leading" secondItem="wed-tx-xSo" secondAttribute="leading" id="HsL-9d-Lzk"/>
+                            <constraint firstItem="yFn-Hn-1OM" firstAttribute="bottom" secondItem="wed-tx-xSo" secondAttribute="bottom" id="Liw-7A-oJK"/>
+                            <constraint firstItem="yFn-Hn-1OM" firstAttribute="trailing" secondItem="wed-tx-xSo" secondAttribute="trailing" id="Xwe-wI-zGe"/>
+                            <constraint firstItem="yFn-Hn-1OM" firstAttribute="top" secondItem="wed-tx-xSo" secondAttribute="top" id="rMl-LF-Jp4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Content" id="t1w-Yr-OSL"/>
+                    <connections>
+                        <outlet property="textView" destination="lCy-ch-Sqw" id="IOR-Bi-Cfq"/>
+                        <outlet property="webView" destination="yFn-Hn-1OM" id="8Qe-o0-FDh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CLN-Wo-w0c" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-355" y="803"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="H6w-W9-Let">
+            <objects>
+                <viewController id="rLX-ij-niQ" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qgv-GH-0Ic"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oz3-6A-5zL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YMK-En-RK3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="CIPRES APP" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="whL-md-EEr">
+                                <rect key="frame" x="126" y="40" width="105" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Type your password here" translatesAutoresizingMaskIntoConstraints="NO" id="TXp-kl-SYc">
+                                <rect key="frame" x="72" y="176" width="240" height="57"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Type your username here" translatesAutoresizingMaskIntoConstraints="NO" id="Na6-gB-OVP">
+                                <rect key="frame" x="72" y="89" width="240" height="63"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypD-DS-0tq">
+                                <rect key="frame" x="122" y="250" width="112" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="List All Jobs"/>
+                                <connections>
+                                    <segue destination="kft-LG-Rza" kind="show" identifier="showMaster" id="zNK-rj-TTi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ybH-NC-RtF"/>
+                    <connections>
+                        <outlet property="passtext" destination="TXp-kl-SYc" id="NO9-bE-gBN"/>
+                        <outlet property="usertext" destination="Na6-gB-OVP" id="HfG-1S-cP1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sfn-OG-a2x" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1349" y="803"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Submit Job Output </title>
+	<style> 
+		h1 {color:black;}
+		pre {color:green;
+		    white-space: pre-wrap;       /* CSS 3 */
+    		white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    		white-space: -pre-wrap;      /* Opera 4-6 */
+    		white-space: -o-pre-wrap;    /* Opera 7 */
+    		word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    		}
+	</style>
+</head>
+
+<body>
+	<h1> List Jobs Output </h1>
+	<p>		
+		<pre><xmp>
+		What would you like to do? Valid commands are:
+		List Jobs (LJ); Submit Job (S); Delete Job (D); List Results (LR);
+		Download Results (DR); Get Tools (GT); Exit (E)
+		lj
+		User typed lj
+		Listing your jobs
+		-u abl012: -H cipres-appkey:Test2-5C8978C1ECF443E5AB1D1E037C684AE5 https://www.phylo.org/cipresrest/v1/job/abl012
+		<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+		<joblist>
+		    <title>Submitted Jobs</title>
+		    <jobs>
+		        <jobstatus>
+		            <selfUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</url>
+		                <rel>jobstatus</rel>
+		                <title>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</title>
+		            </selfUri>
+		        </jobstatus>
+		    </jobs>
+		</joblist>
+		</xmp></pre>
+	</p>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> CIPRES Perl Demo Writeup </title>
+	<style>
+		p {color:blue;}
+	</style>
+</head>
+
+<body>
+	<h1> CIPRES Perl Demo Writeup </h1>
+	<p>
+		This is a writeup and a guide on how to
+		use the cipres_demo.pl program. 
+		Perl Implementation of the CIPRES REST Program 
+	</p>
+	In the following guide, there are the following
+	sections (you can click on any to go to them):
+	<br><b>
+	<a href = "#SoftwareRequirements">I. Software Requirements</a><br>
+	<a href = "#HowToUse">II. How to Use</a><br>
+	<a href = "#Example">III. Example Perl Script </a><br>
+	<a href = "#SupplementalInformation">IV. Supplemental Information</a><br>
+	</b><br>
+	<hr></hr>
+	<font color = "red"> IMPORTANT </font><hr></hr><b><p>
+	Before starting, it is important that you first follow the registration instructions in the <u><font color = "black">Getting Started Guide</u></font> (<a href="https://www.phylo.org/restusers/docs/guide.html#Register" style="color:red">https://www.phylo.org/restusers/docs/guide.html#Register</a>) to create. an account for yourself, to login and to register/create an application.</p></b>
+	<hr></hr>
+	<a name = "SoftwareRequirements"><h1> I. Software Requirements </h1></a>
+	<p>
+		The tutorial program is sufficient for either
+		Windows or Linux-based Operating Systems. 
+	</p>
+
+	<h2>Windows:</h2>
+	<p>
+		If using Windows, one should install the <font color = "black"><b>
+		Cygwin software at https://cygwin.com/install.html. </b></font> 
+		Here there are various execution files suitable
+		for specific architectures (32-bit, 64-bit).
+		After downloading the appropriate one, execute
+		the setup program. After selecting a mirror site
+		and fetching data from the site, you will be prompted
+		to choose the packages you want to install. 
+		<br><br>
+		The packages that this program utilizes are called
+		<font color = "black"><b> LWP (Library for WWW in Perl), Config::Properties, URI and Env. </b></font>
+		Thus, you should make sure
+		that all of these packages (except Config::Properties since it is provided) are installed in your computer and detectable in your PATH environment variable. 
+		<br><br>
+		After all this, you can now run the program by entering the following in your terminal: <font color = "green">perl cipres_perl_demo.pl </font> 
+	</p>
+	<h2>Mac:</h2>
+	<p>
+		To install Perl libraries. One can use the application called <a href = "http://perlbrew.pl">PerlBrew</a>. It would be advised to install the latest version of Perl (e.g. Perl 6). Libaries that are used for MAC are the same as those used in Windows.
+
+		If using Mac, one may get into difficulties with <font color = "black"><b> 
+		Certificate Authority validation</b></font>. To fix this, one should use the LWP library version 6.00 or above. 
+		Or look into Net::SSL and how to set the environment variables HTTPS_CA_DIR and HTPPS_CA_FILE. 
+		Otherwise, to take a simple but insecure route, one can add the following bit of code:
+
+		<font color = "green"> $browser->ssl_opts(verify_hostname => 0); </font> prior to the code that enters the user's credentials: <font color = "green"> $browser->credentials(..) </font>
+
+	</p>
+	<h2>Linux:</h2>
+	<p>
+		Simply by using the command: 
+		sudo apt-get install libwww-perl, then one can now run the
+		program using the command <b><font color = "black"> "perl cipres_demo.pl" </font> </b> 
+	</p>
+	<br>
+	<hr></hr>
+	<a name="HowToUse"><h1>II. How to Use</h1></a>
+	<p>
+		To start the program, use the "perl cipres_demo.pl" command on
+		whichever terminal you are using (Cygwin or Linux) and only
+		at the directory where your cipres_demo.pl file is at.
+		<br><br>
+		First you must create a configuration file called pycipres.conf which will contain key, value pairs related to your account (username, password, application name, and application ID) in the CIPRES environment. <br>
+
+		The pycipres.conf file will look something like this: <a href = "../Code/pycipres.conf" style="color:red"> pycipres.conf</a>.<br>
+
+		You can either place the pycipres.config file in your home directory or place the pycipres.config file in any disk location and create an environment variable called<font color = "green"> PYCIPRES </font>. PYCIPRES should contain the full pathname of the pyconfig.file. <br>
+
+		The program will first determine if you have set up your environment variables correctly. If you have provided a valid URL for any of the following environment variables <font color= "green"> $SDK_VERSIONS, $HOME, or $PYCIPRES  </font> and the pycipres.conf key, value pairs are correct, then the program will continue and query you with the following text in green. However, if no environment variable is set properly or any of the key, value pairs are not properly set, then you will receive a <font color = "green" >404 Not Found </font> error and the program will exit. <br>
+
+		Furthermore, if any of the authentication values is incorrect, the program will prompt you to provide a valid username and password to continue. Otherwise, you will have to quit the program (<font color = "red">CTRL+C</font>) and start again.
+		<br><br>
+
+		<i><font color = "green">
+			$ perl cipres_perl_demo.pl<br>
+			Now checking the directory <br>D:\cygwin64\home\Anthony_Lopez\sdk_versions/testdata/pycipres.conf for pycipres.conf<br>
+			Now checking the directory /home/Anthony_Lopez/pycipres.conf for pycipres.conf<br>
+			Now checking the directory D:\cygwin64\home\Anthony_Lopez\pycipres.conf for pycipres.conf<br>
+			We are opening the pycipres file from D:\cygwin64\home\Anthony_Lopez\pycipres.conf<br>
+			Hostname: www.phylo.org<br>
+			What would you like to do? Valid commands are:<br>
+			List Jobs (LJ); Submit Job (S); Delete Job (D); List Results (LR);
+			Download Results (DR); Get Tools (GT); Exit (E)<br>
+			LJ<br>
+			User typed LJ<br>
+			Listing your jobs<br>
+			-u abl012: -H cipres-appkey:Test2-5C8978C1ECF443E5AB1D1E037C684AE5 https://www.phylo.org/cipresrest/v1/job/abl012<br>
+
+			Please input the correct credentials<br>
+			Please provide your username:<br>
+			abl012<br>
+			Please provide your password:<br>
+			[Password] <br>
+			What would you like to do? Valid commands are: <br>
+			List Jobs (LJ); Submit Job (S); Delete Job (D); List Results (LR);<br>
+			Download Results (DR); Get Tools (GT); Exit (E)<br>
+		</font></i><br><br>
+
+		<br><br>
+		After submitting the correct username and password. 
+		You can now choose a command out of the listed possible commands: <br>
+		<font color = "green"><i>List Jobs (LJ); Submit Job (S); Delete Job (D); List Results (LR);<br>
+		Download Results (DR); Get Tools (GT); Exit (E)</font></i><br><br>
+		Each command input is non-case specific. E.g. "lj" and "LJ" will both
+		list jobs that are submitted. <br> 
+		The description of each command and what they do can be
+		found on the CIPRES REST API documentation. But here are some simple
+		descriptions and advice on how to use each command. 
+		<br><br>
+		Note: All output will be in XML form. <br>
+		<font color = "black"><b>List Jobs (LJ)</b></font>: Will list all jobs submitted along with their individual parameters such 
+		as their completion state. A sample output for this command can be found <a href = "./list_jobs_output.html" style = "color:red"> here</a>.<br>
+		<font color= "black"><b>Submit Job(S)</b></font>: Will submit a job. For this job, a job is first required as input, and then an input file of correct type according to the tool specifications. In addition, the user will be queried if they want to receive an email upon job completion. Furthermore, if the user would like to provide a tree input, they will be queried, and if on,so, the user must submit a tree file name as input. <br>
+		An example of the output for the <font color = "black"> Submit Job (SJ)</font> command can be found 
+		<a href = "./submit_job_output.html" style = "color:red"> here</a>.<br>
+		<font color = "black"><b>Delete Job (D)</b></font>: will delete a specified job whether completed or not. Some example output is
+		<a href = "./delete_job_output.html" style = "color:red"> here</a>.<br>
+		<font color = "black"><b>List Results (LR)</b></font>: will list any results for a specific job. Some example output is 
+		<a href = "./list_results_output.html" style = "color:red"> here</a>.<br>
+		<font color = "black"><b>Download Results (DR)</b></font>: will allow the user to download results for a specific job. Some example output is
+		<a href = "./download_results_output.html" style = " color:red"> here</a>.<br> 
+		<font color = "black"><b>Get Tools (GT)</b></font>: will store all the tool names in a file in the user's local directory. Some example output is:
+		<a href = "./get_tools_output.html" style = " color:red"> here</a>.<br>
+		<font color = "black"><b>Exit(E)</b></font> will simply exit the program normally. 
+		 Otherwise the user can use Ctrl+C or Ctrl+D.
+		 <br>
+	</p>
+	<hr></hr>
+	<a name = "Example"><h1>III. Example Perl Script</h1></a>
+	<p>
+		To download the PERL script example, here is the link to the folder with all the required files (don't forget to fill in the configuration file!): <a href = "../Perl_Demo_Code.zip" style = "color:red"> Perl_Demo_Code.zip</a>. <br>
+		Please make sure you have followed and understood all of the requirements before running the program. 
+	</p>
+	<hr></hr>
+	<a name = "SupplementalInformation"><h1>IV. Supplemental Information</h1></a>
+	<i>
+	Author</i>:<br>
+	Anthony Lopez <br>
+	CIPRES REST Services
+	 
+</body>
+</html>

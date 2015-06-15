@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C2C899DB-093A-417A-9C38-C6953FB09C9C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CIPRES APP</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>49C492463FD235372E2E2D675E6548A679CB1CE1</key>
+		<string>https://bitbucket.org/sakaki1/cipres-app.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CIPRES APP.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>49C492463FD235372E2E2D675E6548A679CB1CE1</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/sakaki1/cipres-app.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>49C492463FD235372E2E2D675E6548A679CB1CE1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>49C492463FD235372E2E2D675E6548A679CB1CE1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CIPRES%20APP</string>
+		</dict>
+	</array>
+</dict>
+</plist>

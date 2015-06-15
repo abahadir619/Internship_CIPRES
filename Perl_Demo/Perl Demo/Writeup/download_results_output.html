@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Download Results Output </title>
+	<style> 
+		h1 {color:black;}
+		pre {color:green;
+		    white-space: pre-wrap;       /* CSS 3 */
+    		white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    		white-space: -pre-wrap;      /* Opera 4-6 */
+    		white-space: -o-pre-wrap;    /* Opera 7 */
+    		word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    		}
+	</style>
+</head>
+
+<body>
+	<h1> Download Results Output </h1>
+	<p>		
+		<pre><xmp>
+		What would you like to do? Valid commands are:
+		List Jobs (LJ); Submit Job (S); Delete Job (D); List Results (LR);
+		Download Results (DR); Get Tools (GT); Exit (E)
+		lj
+		User typed lj
+		Listing your jobs
+		-u abl012: -H cipres-appkey:Test2-5C8978C1ECF443E5AB1D1E037C684AE5 https://www.phylo.org/cipresrest/v1/job/abl012
+		<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+		<joblist>
+		    <title>Submitted Jobs</title>
+		    <jobs>
+		        <jobstatus>
+		            <selfUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</url>
+		                <rel>jobstatus</rel>
+		                <title>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</title>
+		            </selfUri>
+		        </jobstatus>
+		    </jobs>
+		</joblist>
+
+		What would you like to do? Valid commands are:
+		List Jobs (LJ); Submit Job (S); Delete Job (D); List Results (LR);
+		Download Results (DR); Get Tools (GT); Exit (E)
+		lr
+		User typed lr
+		Please provide the name of the submitted job
+		eg. 'NGBW-JOB-CLUSTALW-3957CC6EBF5E448095A5666B41EDDF90'
+		NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF
+		User typed NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF
+		Listing the job results
+		-u abl012: -H cipres-appkey:Test2-5C8978C1ECF443E5AB1D1E037C684AE5 https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output
+		<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+		<results>
+		    <jobfiles>
+		        <jobfile>
+		            <downloadUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5599</url>
+		                <rel>fileDownload</rel>
+		                <title>STDOUT</title>
+		            </downloadUri>
+		            <jobHandle>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</jobHandle>
+		            <filename>STDOUT</filename>
+		            <length>1004</length>
+		            <parameterName>PROCESS_OUTPUT</parameterName>
+		            <outputDocumentId>5599</outputDocumentId>
+		        </jobfile>
+		        <jobfile>
+		            <downloadUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5600</url>
+		                <rel>fileDownload</rel>
+		                <title>STDERR</title>
+		            </downloadUri>
+		            <jobHandle>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</jobHandle>
+		            <filename>STDERR</filename>
+		            <length>0</length>
+		            <parameterName>PROCESS_OUTPUT</parameterName>
+		            <outputDocumentId>5600</outputDocumentId>
+		        </jobfile>
+		        <jobfile>
+		            <downloadUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5601</url>
+		                <rel>fileDownload</rel>
+		                <title>infile.aln</title>
+		            </downloadUri>
+		            <jobHandle>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</jobHandle>
+		            <filename>infile.aln</filename>
+		            <length>5704</length>
+		            <parameterName>aligfile</parameterName>
+		            <outputDocumentId>5601</outputDocumentId>
+		        </jobfile>
+		        <jobfile>
+		            <downloadUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5602</url>
+		                <rel>fileDownload</rel>
+		                <title>scheduler.conf</title>
+		            </downloadUri>
+		            <jobHandle>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</jobHandle>
+		            <filename>scheduler.conf</filename>
+		            <length>11</length>
+		            <parameterName>all_outputfiles</parameterName>
+		            <outputDocumentId>5602</outputDocumentId>
+		        </jobfile>
+		        <jobfile>
+		            <downloadUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5603</url>
+		                <rel>fileDownload</rel>
+		                <title>infile.dnd</title>
+		            </downloadUri>
+		            <jobHandle>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</jobHandle>
+		            <filename>infile.dnd</filename>
+		            <length>144</length>
+		            <parameterName>all_outputfiles</parameterName>
+		            <outputDocumentId>5603</outputDocumentId>
+		        </jobfile>
+		        <jobfile>
+		            <downloadUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5604</url>
+		                <rel>fileDownload</rel>
+		                <title>epilogue.sh</title>
+		            </downloadUri>
+		            <jobHandle>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</jobHandle>
+		            <filename>epilogue.sh</filename>
+		            <length>466</length>
+		            <parameterName>all_outputfiles</parameterName>
+		            <outputDocumentId>5604</outputDocumentId>
+		        </jobfile>
+		        <jobfile>
+		            <downloadUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5605</url>
+		                <rel>fileDownload</rel>
+		                <title>batch_command.status</title>
+		            </downloadUri>
+		            <jobHandle>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</jobHandle>
+		            <filename>batch_command.status</filename>
+		            <length>143</length>
+		            <parameterName>all_outputfiles</parameterName>
+		            <outputDocumentId>5605</outputDocumentId>
+		        </jobfile>
+		        <jobfile>
+		            <downloadUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5606</url>
+		                <rel>fileDownload</rel>
+		                <title>infile.aln</title>
+		            </downloadUri>
+		            <jobHandle>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</jobHandle>
+		            <filename>infile.aln</filename>
+		            <length>5704</length>
+		            <parameterName>all_outputfiles</parameterName>
+		            <outputDocumentId>5606</outputDocumentId>
+		        </jobfile>
+		        <jobfile>
+		            <downloadUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5607</url>
+		                <rel>fileDownload</rel>
+		                <title>_COMMANDLINE</title>
+		            </downloadUri>
+		            <jobHandle>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</jobHandle>
+		            <filename>_COMMANDLINE</filename>
+		            <length>57</length>
+		            <parameterName>all_outputfiles</parameterName>
+		            <outputDocumentId>5607</outputDocumentId>
+		        </jobfile>
+		        <jobfile>
+		            <downloadUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5608</url>
+		                <rel>fileDownload</rel>
+		                <title>infile.fasta</title>
+		            </downloadUri>
+		            <jobHandle>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</jobHandle>
+		            <filename>infile.fasta</filename>
+		            <length>3578</length>
+		            <parameterName>all_outputfiles</parameterName>
+		            <outputDocumentId>5608</outputDocumentId>
+		        </jobfile>
+		        <jobfile>
+		            <downloadUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5609</url>
+		                <rel>fileDownload</rel>
+		                <title>term.txt</title>
+		            </downloadUri>
+		            <jobHandle>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</jobHandle>
+		            <filename>term.txt</filename>
+		            <length>333</length>
+		            <parameterName>all_outputfiles</parameterName>
+		            <outputDocumentId>5609</outputDocumentId>
+		        </jobfile>
+		        <jobfile>
+		            <downloadUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5610</url>
+		                <rel>fileDownload</rel>
+		                <title>stderr.txt</title>
+		            </downloadUri>
+		            <jobHandle>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</jobHandle>
+		            <filename>stderr.txt</filename>
+		            <length>0</length>
+		            <parameterName>all_outputfiles</parameterName>
+		            <outputDocumentId>5610</outputDocumentId>
+		        </jobfile>
+		        <jobfile>
+		            <downloadUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5611</url>
+		                <rel>fileDownload</rel>
+		                <title>_JOBINFO.TXT</title>
+		            </downloadUri>
+		            <jobHandle>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</jobHandle>
+		            <filename>_JOBINFO.TXT</filename>
+		            <length>482</length>
+		            <parameterName>all_outputfiles</parameterName>
+		            <outputDocumentId>5611</outputDocumentId>
+		        </jobfile>
+		        <jobfile>
+		            <downloadUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5612</url>
+		                <rel>fileDownload</rel>
+		                <title>start.txt</title>
+		            </downloadUri>
+		            <jobHandle>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</jobHandle>
+		            <filename>start.txt</filename>
+		            <length>40</length>
+		            <parameterName>all_outputfiles</parameterName>
+		            <outputDocumentId>5612</outputDocumentId>
+		        </jobfile>
+		        <jobfile>
+		            <downloadUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5613</url>
+		                <rel>fileDownload</rel>
+		                <title>stdout.txt</title>
+		            </downloadUri>
+		            <jobHandle>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</jobHandle>
+		            <filename>stdout.txt</filename>
+		            <length>1004</length>
+		            <parameterName>all_outputfiles</parameterName>
+		            <outputDocumentId>5613</outputDocumentId>
+		        </jobfile>
+		        <jobfile>
+		            <downloadUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5614</url>
+		                <rel>fileDownload</rel>
+		                <title>done.txt</title>
+		            </downloadUri>
+		            <jobHandle>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</jobHandle>
+		            <filename>done.txt</filename>
+		            <length>40</length>
+		            <parameterName>all_outputfiles</parameterName>
+		            <outputDocumentId>5614</outputDocumentId>
+		        </jobfile>
+		        <jobfile>
+		            <downloadUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5615</url>
+		                <rel>fileDownload</rel>
+		                <title>batch_command.cmdline</title>
+		            </downloadUri>
+		            <jobHandle>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</jobHandle>
+		            <filename>batch_command.cmdline</filename>
+		            <length>48</length>
+		            <parameterName>all_outputfiles</parameterName>
+		            <outputDocumentId>5615</outputDocumentId>
+		        </jobfile>
+		        <jobfile>
+		            <downloadUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5616</url>
+		                <rel>fileDownload</rel>
+		                <title>batch_command.run</title>
+		            </downloadUri>
+		            <jobHandle>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</jobHandle>
+		            <filename>batch_command.run</filename>
+		            <length>1062</length>
+		            <parameterName>all_outputfiles</parameterName>
+		            <outputDocumentId>5616</outputDocumentId>
+		        </jobfile>
+		        <jobfile>
+		            <downloadUri>
+		                <url>https://www.phylo.org/cipresrest/v1/job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5617</url>
+		                <rel>fileDownload</rel>
+		                <title>infile.dnd</title>
+		            </downloadUri>
+		            <jobHandle>NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF</jobHandle>
+		            <filename>infile.dnd</filename>
+		            <length>144</length>
+		            <parameterName>phylipnewtreefile</parameterName>
+		            <outputDocumentId>5617</outputDocumentId>
+		        </jobfile>
+		    </jobfiles>
+		</results>
+		
+		What would you like to do? Valid commands are:
+		List Jobs (LJ); Submit Job (S); Delete Job (D); List Results (LR);
+		Download Results (DR); Get Tools (GT); Exit (E)
+		dr
+		User typed dr
+		Please provide the output file name
+		test_output.txt
+		User typed test_output.txt
+		Please provide the job download URI
+		Eg NGBW-JOB-CLUSTALW-E999C970C4754A4CB3E44CF87EF30DF0/output/4990
+		NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5617
+		User typed NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5617
+		-u abl012: -H cipres-appkey:Test2-5C8978C1ECF443E5AB1D1E037C684AE5 job/abl012/NGBW-JOB-CLUSTALW-4191C0E0A8B943FC9DC6282EABFAAABF/output/5617
+		Please see the file 'test_output.txt' in the current directory.
+
+
+		</xmp></pre>
+	</p>
+</body>
+</html>
